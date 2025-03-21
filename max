@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main(void) {
+    int i, x;
+    printf("Enter the length of the array: ");
+    scanf("%d", &x);
+    if (x <= 0) {
+        printf("Invalid array size.\n");
+        return 1;}
+    int *arr = (int *)malloc(x * sizeof(int));
+    printf("Randomly generated array:\n");
+    for (i = 0; i < x; i++) {
+        arr[i] =rand() % 100; 
+        printf("arr[%d] = %d\n", i, arr[i]);
+    }
+    return 0;
+}
